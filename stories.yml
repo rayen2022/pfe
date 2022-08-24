@@ -1,0 +1,159 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+    entities:
+    - greet: bonjour
+  - action: utter_greet
+  - action: utter_salut
+  - intent: commander
+    entities:
+    - commander: je veux passer une commande
+  - action: utter_commander
+  - intent: produit
+    entities:
+    - produit: a216
+  - action: utter_quantity
+  - intent: quantity
+    entities:
+    - quantity: '30'
+  - action: utter_confirm
+  - intent: confirm
+    entities:
+    - confirm: confirmer
+  - action: utter_goodbye
+  - intent: goodbye
+  - action: utter_goodbye
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+    entities:
+    - greet: bonjour
+  - action: utter_greet
+  - action: utter_salut
+  - intent: commander
+    entities:
+    - commander: je veux commander
+  - action: utter_commander
+  - intent: produit
+    entities:
+    - produit: c612
+  - action: utter_quantity
+  - intent: quantity
+    entities:
+    - quantity: '12'
+  - action: utter_confirm
+  - intent: confirm
+    entities:
+    - commander: je
+    - confirm: confirme
+  - action: utter_goodbye
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+    entities:
+    - greet: bonjour
+  - action: utter_greet
+  - action: utter_salut
+  - intent: commander
+    entities:
+    - commander: je veux passer une commande
+  - action: utter_commander
+  - intent: produit
+    entities:
+    - produit: sp60
+  - action: utter_quantity
+  - intent: quantity
+    entities:
+    - quantity: '130'
+  - action: utter_confirm
+  - intent: confirm
+    entities:
+    - confirm: je confirme
+  - action: utter_goodbye
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+    entities:
+    - greet: slm
+  - action: utter_greet
+  - action: utter_salut
+  - intent: commander
+    entities:
+    - commander: je commande
+  - action: utter_commander
+  - intent: produit
+    entities:
+    - produit: je veux sp60
+  - action: utter_quantity
+  - intent: quantity
+    entities:
+    - quantity: '60'
+  - action: utter_confirm
+  - intent: confirm
+    entities:
+    - confirm: confirmer
+  - action: utter_goodbye
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+    entities:
+    - greet: slm
+  - action: utter_greet
+  - action: utter_salut
+  - intent: commander
+    entities:
+    - commander: je commande
+  - action: utter_commander
+  - intent: produit
+    entities:
+    - produit: je veux sp60
+  - action: utter_quantity
+  - intent: quantity
+    entities:
+    - quantity: '80'
+  - action: utter_confirm
+  - intent: deny
+  - action: utter_goodbye
