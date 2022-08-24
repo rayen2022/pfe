@@ -1,0 +1,64 @@
+version: '3.1'
+intents:
+- affirm
+- bot_challenge
+- commander
+- confirm
+- deny
+- goodbye
+- greet
+- mood_great
+- mood_unhappy
+- produit
+- quantity
+slots: 
+  resource_type:
+    type: text
+    influence_conversation: true
+  resource_topic:
+    type: categorical
+    values:
+      - nlp 
+      - ml 
+      - rasa 
+
+responses:
+  utter_salut:
+  - text: bonjour je suis votre agent e-commerce comment puis-je vous aider
+  utter_commander:
+  - text: merci d'entrer le nom du produit
+  utter_quantity:
+  - text: entrer la quantity
+  utter_confirm:
+  - text: 'pour confirmer votre commande tapper confirmer ou je confirme '
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+entities:
+- confirm
+- commander
+- greet
+- produit
+- quantity
+- resource_topic
+- resource_type
+actions:
+- utter_commander
+- utter_confirm
+- utter_goodbye
+- utter_greet
+- utter_quantity
+- utter_salut
