@@ -1,0 +1,131 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - [bonjour](greet)
+    - [bonsoir](greet)
+    - [slm](greet)
+    - [slm](greet)
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - [oui](affirm)
+    - [ui](affirm)
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - [non](deny)
+    - [nn](deny)
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: commander
+  examples: |
+    - [je veux passer une commande](commander)
+    - [je veux commander](commander)
+    - [je commande](commander)
+    - [je commande](commander)
+- intent: produit
+  examples: |
+    - [je veux le produit a216](produit)
+    - [je veux commander le produit a216](produit)
+    - [a216](produit)
+    - [je veux commander a216](produit)
+    - [je commander a216](produit)
+    - [je veux commander c216](produit)
+    - [je commande c216](produit)
+    - [c612](produit)
+    - [je veux commander sp60](produit)
+    - [je commande sp60](produit)
+    - [sp60](produit)
+    - [je veux sp60](produit)
+    = [](produit)
+- intent: quantity
+  examples: |
+    - [30 pièces](quantity)
+    - [je veux 30 pièces](quantity)
+    - [12 pièces](quantity)
+    - [30](quantity)
+    - [je veux 130 pièces](quantity)
+    - [12](quantity)
+    - [130](quantity)
+    - [60](quantity)
+    - [](quantity)
+- intent: confirm
+  examples: |
+    - [confirmer](confirm)
+    - [confirme](confirm)
+    - [je confirme](confirm)
+    - [confirmer](confirm)
+    -[](confirm)
